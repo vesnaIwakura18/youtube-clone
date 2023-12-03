@@ -12,7 +12,7 @@ app.post("/process-video", async (req, res) => {
     try {
         const message = Buffer.from(req.body.message.data, 'base64').toString('utf8');
         data = JSON.parse(message);
-        if (!data.message) {
+        if (!data.name) {
             throw new Error('Invalid message payload received.');
         }
     } catch (error) {

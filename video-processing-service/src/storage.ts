@@ -34,10 +34,10 @@ export function convertVideo(rawVideoName: string, processedVideoName: string) {
 export async function downloadRawVideo(fileName: string) {
     await storage.bucket(rawVideoBucketName)
         .file(fileName)
-        .download({ destination: `${localProcessedVideoPath}/${fileName}` });
+        .download({ destination: `${localRawVideoPath}/${fileName}` });
 
     console.log(
-        `gs://${rawVideoBucketName}/${fileName} downloaded to ${localProcessedVideoPath}/${fileName}}`
+        `gs://${rawVideoBucketName}/${fileName} downloaded to ${localRawVideoPath}/${fileName}}`
     );
 }
 
