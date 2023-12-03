@@ -5,7 +5,7 @@ import ffmpeg from "fluent-ffmpeg";
 const storage = new Storage();
 
 const rawVideoBucketName = "iwak-yt-raw-videos";
-const processedVideoName = "iwak-yt-processedVideos"
+const processedVideoName = "iwak-yt-processed-videos"
 
 const localRawVideoPath = "./raw-videos";
 const localProcessedVideoPath = "./processed-videos";
